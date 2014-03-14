@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "rottentomatos/views/az_MovieCell.m"
-            timestampString = "416526703.234485"
+            timestampString = "416531080.628403"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "-updateContent:withFailure:"
             landmarkType = "5">
          </BreakpointContent>

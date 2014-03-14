@@ -28,6 +28,9 @@
 {
     
     self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    UIView *bg = [[UIView alloc] init];
+    bg.backgroundColor = [UIColor colorWithRed:220 green:0 blue:0 alpha:0.4];
+    self.selectedBackgroundView = bg;
     
     _movieTitleLabel.text = movie.title;
     _movieSynopsisLabel.text = movie.synopsis;
