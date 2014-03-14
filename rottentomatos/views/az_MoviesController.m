@@ -20,6 +20,8 @@ static NSString * const CELL_ID  = @"az_MovieCell";
 @property (weak, nonatomic) IBOutlet UITableView *moviesTableView;
 @property (nonatomic) NSMutableArray* movies;
 
+- (void)fetchContent:(UIRefreshControl*)refreshControl;
+
 @end
 
 @implementation az_MoviesController
@@ -39,6 +41,12 @@ static NSString * const CELL_ID  = @"az_MovieCell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    // pull to refresh
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    [_moviesTableView addSubview:refreshControl];
 
     // set up table view
     _moviesTableView.contentInset = UIEdgeInsetsMake(0.0f, 0.0f, 90.0f, 0.0f);
@@ -49,13 +57,18 @@ static NSString * const CELL_ID  = @"az_MovieCell";
                                                      bundle:[NSBundle mainBundle]]
                                      forCellReuseIdentifier:CELL_ID];
     
-
     // show a loading indicator
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self fetchContent:nil];
     
+}
+
+- (void)fetchContent:(UIRefreshControl*)refreshControl
+{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [az_RottenTomatoClient getMoviesWithSuccess:^(NSMutableArray *movies) {
         _movies = movies;
         [_moviesTableView reloadData];
+        if (refreshControl != nil) [refreshControl endRefreshing];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     } andFailure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // TODO Add network error
@@ -63,6 +76,7 @@ static NSString * const CELL_ID  = @"az_MovieCell";
         CGRect frame = _networkErrorView.frame;
         frame.size.height = 23;
         _networkErrorView.frame = frame;
+        if (refreshControl != nil) [refreshControl endRefreshing];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
     
@@ -110,6 +124,10 @@ static NSString * const CELL_ID  = @"az_MovieCell";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     return 109;
+}
+
+- (void)refresh:(UIRefreshControl *)refreshControl {
+    [refreshControl endRefreshing];
 }
 
 @end
