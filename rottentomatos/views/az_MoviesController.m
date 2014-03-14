@@ -16,6 +16,7 @@ static NSString * const CELL_ID  = @"az_MovieCell";
 
 @interface az_MoviesController ()
 
+@property (weak, nonatomic) IBOutlet UIView *networkErrorView;
 @property (weak, nonatomic) IBOutlet UITableView *moviesTableView;
 @property (nonatomic) NSMutableArray* movies;
 
@@ -59,6 +60,9 @@ static NSString * const CELL_ID  = @"az_MovieCell";
     } andFailure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // TODO Add network error
         NSLog(@"%@", error);
+        CGRect frame = _networkErrorView.frame;
+        frame.size.height = 23;
+        _networkErrorView.frame = frame;
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
     
