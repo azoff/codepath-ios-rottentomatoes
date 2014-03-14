@@ -19,6 +19,7 @@
     
     az_MoviesController *controller = [[az_MoviesController alloc] init];
     UINavigationController *root = [[UINavigationController alloc] initWithRootViewController:controller];
+    root.navigationBar.tintColor = [UIColor colorWithRed:220 green:0 blue:0 alpha:0.6];
     
     self.window.rootViewController = root;
     

@@ -56,10 +56,16 @@ static NSString * const CELL_ID  = @"az_MovieCell";
     [_moviesTableView registerNib:[UINib nibWithNibName:CELL_ID
                                                      bundle:[NSBundle mainBundle]]
                                      forCellReuseIdentifier:CELL_ID];
-    
     // show a loading indicator
     [self fetchContent:nil];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+	NSIndexPath* selection = [_moviesTableView indexPathForSelectedRow];
+	if (selection)
+		[_moviesTableView deselectRowAtIndexPath:selection animated:YES];
 }
 
 - (void)fetchContent:(UIRefreshControl*)refreshControl
