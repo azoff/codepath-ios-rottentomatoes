@@ -7,10 +7,9 @@
 //
 
 #import "az_MovieCell.h"
-#import "az_Movie.h"
 #import "az_CastMember.h"
-#import <AFNetworking/AFNetworking.h>
-#import <AFNetworking/UIImageView+AFNetworking.h>
+#import "AFNetworking.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface az_MovieCell ()
 

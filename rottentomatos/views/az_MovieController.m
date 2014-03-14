@@ -7,7 +7,8 @@
 //
 
 #import "az_MovieController.h"
-#import <AFNetworking/UIImageView+AFNetworking.h>
+#import "UIImageView+AFNetworking.h"
+#import "MBProgressHUD.h"
 
 @interface az_MovieController ()
 
@@ -37,12 +38,20 @@
     _synopsisLabel.text = _movie.synopsis;
     _castLabel.text = [_movie.castMemebers componentsJoinedByString:@", "];
     NSURLRequest * request = [NSURLRequest requestWithURL:_movie.posterFull];
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.yOffset = -70.0f;
+    
     [_fullImageView setImageWithURLRequest:request
                           placeholderImage:nil
-                                   success:nil
+                                   success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                                       _fullImageView.image = image;
+                                       [hud hide:YES];
+                                   }
                                    failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
                                        // TODO Add network error
                                        NSLog(@"%@", error);
+                                       [hud hide:YES];
                                    }];
 }
 

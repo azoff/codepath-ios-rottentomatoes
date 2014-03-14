@@ -47,6 +47,8 @@
 		C900119618D39A0B0037E9E6 /* az_MovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = az_MovieController.h; path = views/az_MovieController.h; sourceTree = "<group>"; };
 		C900119718D39A0B0037E9E6 /* az_MovieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = az_MovieController.m; path = views/az_MovieController.m; sourceTree = "<group>"; };
 		C900119818D39A0B0037E9E6 /* az_MovieController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = az_MovieController.xib; path = views/az_MovieController.xib; sourceTree = "<group>"; };
+		C90011A118D3A6F20037E9E6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C90011A318D3A6FC0037E9E6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C984DD4A18D2AB60005D8FF7 /* az_MoviesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = az_MoviesController.h; path = views/az_MoviesController.h; sourceTree = "<group>"; };
 		C984DD4B18D2AB60005D8FF7 /* az_MoviesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = az_MoviesController.m; path = views/az_MoviesController.m; sourceTree = "<group>"; };
 		C984DD4C18D2AB60005D8FF7 /* az_MoviesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = az_MoviesController.xib; path = views/az_MoviesController.xib; sourceTree = "<group>"; };
@@ -125,6 +127,8 @@
 		C99969BB18D2A5F500388196 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C90011A318D3A6FC0037E9E6 /* MobileCoreServices.framework */,
+				C90011A118D3A6F20037E9E6 /* SystemConfiguration.framework */,
 				C99969BC18D2A5F500388196 /* Foundation.framework */,
 				C99969BE18D2A5F500388196 /* CoreGraphics.framework */,
 				C99969C018D2A5F500388196 /* UIKit.framework */,

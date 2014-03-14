@@ -10,6 +10,7 @@
 #import "az_MoviesController.h"
 #import "az_MovieController.h"
 #import "az_RottenTomatoClient.h"
+#import "MBProgressHUD.h"
 
 static NSString * const CELL_ID  = @"az_MovieCell";
 
@@ -38,22 +39,27 @@ static NSString * const CELL_ID  = @"az_MovieCell";
 {
     [super viewDidLoad];
 
+    // set up table view
+    _moviesTableView.contentInset = UIEdgeInsetsMake(0.0f, 0.0f, 90.0f, 0.0f);
+    _moviesTableView.separatorInset = UIEdgeInsetsZero;
     _moviesTableView.dataSource = self;
     _moviesTableView.delegate = self;
-    
     [_moviesTableView registerNib:[UINib nibWithNibName:CELL_ID
                                                      bundle:[NSBundle mainBundle]]
                                      forCellReuseIdentifier:CELL_ID];
     
-    _moviesTableView.contentInset = UIEdgeInsetsMake(0.0f, 0.0f, 90.0f, 0.0f);
-    _moviesTableView.separatorInset = UIEdgeInsetsZero;
+
+    // show a loading indicator
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     [az_RottenTomatoClient getMoviesWithSuccess:^(NSMutableArray *movies) {
         _movies = movies;
         [_moviesTableView reloadData];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     } andFailure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // TODO Add network error
         NSLog(@"%@", error);
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
     
 }

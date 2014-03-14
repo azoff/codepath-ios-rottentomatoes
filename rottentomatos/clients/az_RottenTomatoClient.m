@@ -8,18 +8,10 @@
 
 #import "az_RottenTomatoClient.h"
 #import "az_Movie.h"
-#import <AFNetworking/AFNetworking.h>
+#import "AFNetworking.h"
 
 static NSString * const BASE_URL = @"http://api.rottentomatoes.com/api/public/v1.0";
 static NSString * const API_KEY  = @"azx4yy67n4pf5x6h88x36fjt";
-
-@interface az_RottenTomatoClient ()
-
-+ (void)getJSON:(NSString*)forPath
-    withSuccess:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-     andFailure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
-
-@end
 
 @implementation az_RottenTomatoClient
 
