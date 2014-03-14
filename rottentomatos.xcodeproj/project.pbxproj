@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2B4A8599D99846F0ACDEA680 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50455A8E55DD4BB884AF7BF6 /* libPods.a */; };
+		C900119918D39A0B0037E9E6 /* az_MovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = C900119718D39A0B0037E9E6 /* az_MovieController.m */; };
+		C900119A18D39A0B0037E9E6 /* az_MovieController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C900119818D39A0B0037E9E6 /* az_MovieController.xib */; };
 		C984DD4D18D2AB60005D8FF7 /* az_MoviesController.m in Sources */ = {isa = PBXBuildFile; fileRef = C984DD4B18D2AB60005D8FF7 /* az_MoviesController.m */; };
 		C984DD4E18D2AB60005D8FF7 /* az_MoviesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C984DD4C18D2AB60005D8FF7 /* az_MoviesController.xib */; };
 		C984DD5218D2BEFC005D8FF7 /* az_MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C984DD5018D2BEFC005D8FF7 /* az_MovieCell.m */; };
@@ -42,6 +44,9 @@
 /* Begin PBXFileReference section */
 		50455A8E55DD4BB884AF7BF6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		91B4813F0B5244CA9DD4B392 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C900119618D39A0B0037E9E6 /* az_MovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = az_MovieController.h; path = views/az_MovieController.h; sourceTree = "<group>"; };
+		C900119718D39A0B0037E9E6 /* az_MovieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = az_MovieController.m; path = views/az_MovieController.m; sourceTree = "<group>"; };
+		C900119818D39A0B0037E9E6 /* az_MovieController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = az_MovieController.xib; path = views/az_MovieController.xib; sourceTree = "<group>"; };
 		C984DD4A18D2AB60005D8FF7 /* az_MoviesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = az_MoviesController.h; path = views/az_MoviesController.h; sourceTree = "<group>"; };
 		C984DD4B18D2AB60005D8FF7 /* az_MoviesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = az_MoviesController.m; path = views/az_MoviesController.m; sourceTree = "<group>"; };
 		C984DD4C18D2AB60005D8FF7 /* az_MoviesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = az_MoviesController.xib; path = views/az_MoviesController.xib; sourceTree = "<group>"; };
@@ -148,6 +153,9 @@
 				C984DD5818D2C60A005D8FF7 /* az_Movie.m */,
 				C984DD5A18D2C839005D8FF7 /* az_CastMember.h */,
 				C984DD5B18D2C839005D8FF7 /* az_CastMember.m */,
+				C900119618D39A0B0037E9E6 /* az_MovieController.h */,
+				C900119718D39A0B0037E9E6 /* az_MovieController.m */,
+				C900119818D39A0B0037E9E6 /* az_MovieController.xib */,
 			);
 			path = rottentomatos;
 			sourceTree = "<group>";
@@ -263,6 +271,7 @@
 				C99969CF18D2A5F500388196 /* Images.xcassets in Resources */,
 				C984DD4E18D2AB60005D8FF7 /* az_MoviesController.xib in Resources */,
 				C984DD5318D2BEFC005D8FF7 /* az_MovieCell.xib in Resources */,
+				C900119A18D39A0B0037E9E6 /* az_MovieController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +328,7 @@
 				C984DD4D18D2AB60005D8FF7 /* az_MoviesController.m in Sources */,
 				C99969CD18D2A5F500388196 /* az_AppDelegate.m in Sources */,
 				C984DD5218D2BEFC005D8FF7 /* az_MovieCell.m in Sources */,
+				C900119918D39A0B0037E9E6 /* az_MovieController.m in Sources */,
 				C984DD5618D2C091005D8FF7 /* az_RottenTomatoClient.m in Sources */,
 				C984DD5918D2C60A005D8FF7 /* az_Movie.m in Sources */,
 			);

@@ -8,6 +8,7 @@
 
 #import "az_MovieCell.h"
 #import "az_MoviesController.h"
+#import "az_MovieController.h"
 #import "az_RottenTomatoClient.h"
 
 static NSString * const CELL_ID  = @"az_MovieCell";
@@ -86,6 +87,14 @@ static NSString * const CELL_ID  = @"az_MovieCell";
     }];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    az_MovieController *next = [[az_MovieController alloc] init];
+    [next setMovie:[_movies objectAtIndex:indexPath.item]];
+    [self.navigationController pushViewController:next animated:YES];
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
