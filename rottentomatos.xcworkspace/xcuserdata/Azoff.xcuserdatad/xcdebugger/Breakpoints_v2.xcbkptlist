@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "rottentomatos/clients/az_RottenTomatoClient.h"
-            timestampString = "416476260.917245"
+            timestampString = "416533929.401564"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
             endingLineNumber = "15"
-            landmarkName = "+getMoviesWithSuccess:andFailure:"
+            landmarkName = "+getBoxOfficeMoviesWithSuccess:andFailure:"
             landmarkType = "4">
          </BreakpointContent>
       </BreakpointProxy>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "rottentomatos/views/az_MoviesController.m"
-            timestampString = "416531781.007286"
+            timestampString = "416537300.364069"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -135,13 +135,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "rottentomatos/views/az_MoviesController.m"
-            timestampString = "416531781.007286"
+            filePath = "rottentomatos/az_AppDelegate.m"
+            timestampString = "416537673.930359"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "-fetchContent:"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

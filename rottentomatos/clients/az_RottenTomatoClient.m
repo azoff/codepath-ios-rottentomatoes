@@ -27,10 +27,23 @@ static NSString * const API_KEY  = @"azx4yy67n4pf5x6h88x36fjt";
     [operation start];
 }
 
-+ (void)getMoviesWithSuccess:(void (^)(NSMutableArray/*<az_Movie>*/ * movies))success
-     andFailure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
++ (void)getBoxOfficeMoviesWithSuccess:(void (^)(NSMutableArray/*<az_Movie>*/ * movies))success
+                           andFailure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
     [self getJSON:@"/lists/movies/box_office" withSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSMutableArray *movies = [[NSMutableArray alloc] init];
+        NSDictionary *responseDict = (NSDictionary *)responseObject;
+        NSArray *moviesArray = [responseDict valueForKey:@"movies"];
+        for (NSDictionary *movieDict in moviesArray)
+            [movies addObject:[[az_Movie alloc] initWithDictionary:movieDict]];
+        success(movies);
+    } andFailure:failure];
+}
+
++ (void)getTopRentalsWithSuccess:(void (^)(NSMutableArray/*<az_Movie>*/ * movies))success
+                           andFailure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
+{
+    [self getJSON:@"/lists/dvds/top_rentals" withSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSMutableArray *movies = [[NSMutableArray alloc] init];
         NSDictionary *responseDict = (NSDictionary *)responseObject;
         NSArray *moviesArray = [responseDict valueForKey:@"movies"];

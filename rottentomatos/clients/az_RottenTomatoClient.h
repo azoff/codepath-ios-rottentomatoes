@@ -11,7 +11,10 @@
 
 @interface az_RottenTomatoClient : NSObject
 
-+ (void)getMoviesWithSuccess:(void (^)(NSMutableArray/*<az_Movie>*/ * movies))success
-                  andFailure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
++ (void)getBoxOfficeMoviesWithSuccess:(void (^)(NSMutableArray/*<az_Movie>*/ * movies))success
+                           andFailure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+
++ (void)getTopRentalsWithSuccess:(void (^)(NSMutableArray/*<az_Movie>*/ * movies))success
+                           andFailure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 @end

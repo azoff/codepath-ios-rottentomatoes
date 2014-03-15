@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "az_RottenTomatoClient.h"
+#import "MBProgressHUD.h"
 
 @interface az_MoviesController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
+- (void)getMovies:(void (^)(NSMutableArray/*<az_Movie>*/ * movies))success
+       andFailure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 @end

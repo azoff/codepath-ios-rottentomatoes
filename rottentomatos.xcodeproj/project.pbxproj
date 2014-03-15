@@ -10,6 +10,8 @@
 		2B4A8599D99846F0ACDEA680 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50455A8E55DD4BB884AF7BF6 /* libPods.a */; };
 		C900119918D39A0B0037E9E6 /* az_MovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = C900119718D39A0B0037E9E6 /* az_MovieController.m */; };
 		C900119A18D39A0B0037E9E6 /* az_MovieController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C900119818D39A0B0037E9E6 /* az_MovieController.xib */; };
+		C90011A718D3C8C60037E9E6 /* az_BoxOfficeMoviesController.m in Sources */ = {isa = PBXBuildFile; fileRef = C90011A618D3C8C60037E9E6 /* az_BoxOfficeMoviesController.m */; };
+		C90011AA18D3CC360037E9E6 /* az_TopRentalsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C90011A918D3CC360037E9E6 /* az_TopRentalsController.m */; };
 		C984DD4D18D2AB60005D8FF7 /* az_MoviesController.m in Sources */ = {isa = PBXBuildFile; fileRef = C984DD4B18D2AB60005D8FF7 /* az_MoviesController.m */; };
 		C984DD4E18D2AB60005D8FF7 /* az_MoviesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C984DD4C18D2AB60005D8FF7 /* az_MoviesController.xib */; };
 		C984DD5218D2BEFC005D8FF7 /* az_MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C984DD5018D2BEFC005D8FF7 /* az_MovieCell.m */; };
@@ -49,6 +51,10 @@
 		C900119818D39A0B0037E9E6 /* az_MovieController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = az_MovieController.xib; path = views/az_MovieController.xib; sourceTree = "<group>"; };
 		C90011A118D3A6F20037E9E6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C90011A318D3A6FC0037E9E6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C90011A518D3C8C60037E9E6 /* az_BoxOfficeMoviesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = az_BoxOfficeMoviesController.h; path = views/az_BoxOfficeMoviesController.h; sourceTree = "<group>"; };
+		C90011A618D3C8C60037E9E6 /* az_BoxOfficeMoviesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = az_BoxOfficeMoviesController.m; path = views/az_BoxOfficeMoviesController.m; sourceTree = "<group>"; };
+		C90011A818D3CC360037E9E6 /* az_TopRentalsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = az_TopRentalsController.h; path = views/az_TopRentalsController.h; sourceTree = "<group>"; };
+		C90011A918D3CC360037E9E6 /* az_TopRentalsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = az_TopRentalsController.m; path = views/az_TopRentalsController.m; sourceTree = "<group>"; };
 		C984DD4A18D2AB60005D8FF7 /* az_MoviesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = az_MoviesController.h; path = views/az_MoviesController.h; sourceTree = "<group>"; };
 		C984DD4B18D2AB60005D8FF7 /* az_MoviesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = az_MoviesController.m; path = views/az_MoviesController.m; sourceTree = "<group>"; };
 		C984DD4C18D2AB60005D8FF7 /* az_MoviesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = az_MoviesController.xib; path = views/az_MoviesController.xib; sourceTree = "<group>"; };
@@ -160,6 +166,10 @@
 				C900119618D39A0B0037E9E6 /* az_MovieController.h */,
 				C900119718D39A0B0037E9E6 /* az_MovieController.m */,
 				C900119818D39A0B0037E9E6 /* az_MovieController.xib */,
+				C90011A518D3C8C60037E9E6 /* az_BoxOfficeMoviesController.h */,
+				C90011A618D3C8C60037E9E6 /* az_BoxOfficeMoviesController.m */,
+				C90011A818D3CC360037E9E6 /* az_TopRentalsController.h */,
+				C90011A918D3CC360037E9E6 /* az_TopRentalsController.m */,
 			);
 			path = rottentomatos;
 			sourceTree = "<group>";
@@ -328,10 +338,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C984DD5C18D2C839005D8FF7 /* az_CastMember.m in Sources */,
+				C90011A718D3C8C60037E9E6 /* az_BoxOfficeMoviesController.m in Sources */,
 				C99969C918D2A5F500388196 /* main.m in Sources */,
 				C984DD4D18D2AB60005D8FF7 /* az_MoviesController.m in Sources */,
 				C99969CD18D2A5F500388196 /* az_AppDelegate.m in Sources */,
 				C984DD5218D2BEFC005D8FF7 /* az_MovieCell.m in Sources */,
+				C90011AA18D3CC360037E9E6 /* az_TopRentalsController.m in Sources */,
 				C900119918D39A0B0037E9E6 /* az_MovieController.m in Sources */,
 				C984DD5618D2C091005D8FF7 /* az_RottenTomatoClient.m in Sources */,
 				C984DD5918D2C60A005D8FF7 /* az_Movie.m in Sources */,

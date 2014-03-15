@@ -9,8 +9,6 @@
 #import "az_MovieCell.h"
 #import "az_MoviesController.h"
 #import "az_MovieController.h"
-#import "az_RottenTomatoClient.h"
-#import "MBProgressHUD.h"
 
 static NSString * const CELL_ID  = @"az_MovieCell";
 
@@ -42,14 +40,12 @@ static NSString * const CELL_ID  = @"az_MovieCell";
 {
     [super viewDidLoad];
     
-    
     // pull to refresh
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     [_moviesTableView addSubview:refreshControl];
 
     // set up table view
-    _moviesTableView.contentInset = UIEdgeInsetsMake(0.0f, 0.0f, 90.0f, 0.0f);
     _moviesTableView.separatorInset = UIEdgeInsetsZero;
     _moviesTableView.dataSource = self;
     _moviesTableView.delegate = self;
@@ -71,7 +67,7 @@ static NSString * const CELL_ID  = @"az_MovieCell";
 - (void)fetchContent:(UIRefreshControl*)refreshControl
 {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [az_RottenTomatoClient getMoviesWithSuccess:^(NSMutableArray *movies) {
+    [self getMovies:^(NSMutableArray *movies) {
         _movies = movies;
         [_moviesTableView reloadData];
         if (refreshControl != nil) [refreshControl endRefreshing];
@@ -85,13 +81,16 @@ static NSString * const CELL_ID  = @"az_MovieCell";
         if (refreshControl != nil) [refreshControl endRefreshing];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
-    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)getMovies:(void (^)(NSMutableArray *))success andFailure:(void (^)(AFHTTPRequestOperation *, NSError *))failure {
+    
 }
 
 #pragma mark - Table View Methods
